@@ -19,27 +19,24 @@ func main() {
 	fmt.Println("AQQ!!!")
 	fmt.Println(quote.Go())
 
+	callModGreetings("kubus")
+	callModGreetings("")
+}
+
+func callModGreetings(name string) {
 	var message string
 	var err error
 
-	message, err = greetings.Hello("Gladys")
+	message, err = greetings.Hello(name)
+
 	// If an error was returned, print it to the console and
 	// exit the program.
+	// If no error was returned, print the returned message
+	// to the console.
 	if err != nil {
 		log.Fatal(err)
 	}
 	// If no error was returned, print the returned message
 	// to the console.
 	fmt.Println(message)
-
-	message, err = greetings.Hello("")
-	// If an error was returned, print it to the console and
-	// exit the program.
-	if err != nil {
-		log.Fatal(err)
-	}
-	// If no error was returned, print the returned message
-	// to the console.
-	fmt.Println(message)
-
 }
