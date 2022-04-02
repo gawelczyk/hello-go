@@ -15,12 +15,15 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(log.Lmsgprefix | log.LstdFlags)
 
-	fmt.Println("Hello, World!")
-	fmt.Println("AQQ!!!")
+	// fmt.Println("Hello, World!")
+	// fmt.Println("AQQ!!!")
 	fmt.Println(quote.Go())
 
-	callModGreetings("kubus")
-	callModGreetings("")
+	for i := 0; i < 5; i++ {
+		callModGreetings("kubus")
+	}
+
+	// callModGreetings("")
 }
 
 func callModGreetings(name string) {
@@ -39,4 +42,5 @@ func callModGreetings(name string) {
 	// If no error was returned, print the returned message
 	// to the console.
 	fmt.Println(message)
+
 }
