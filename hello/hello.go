@@ -5,7 +5,6 @@ import (
 	"log"
 
 	"example.com/greetings"
-	"rsc.io/quote"
 )
 
 func main() {
@@ -15,9 +14,9 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(log.Lmsgprefix | log.LstdFlags)
 
-	// fmt.Println("Hello, World!")
+	fmt.Println("Hello, World!")
 	// fmt.Println("AQQ!!!")
-	fmt.Println(quote.Go())
+	// fmt.Println(quote.Go())
 
 	for i := 0; i < 5; i++ {
 		callModGreetings("kubus")
